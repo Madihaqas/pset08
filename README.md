@@ -13,7 +13,7 @@ This PSet invites you to apply your knowledge of sets and function, often by pro
 
 To attempt and submit this PSet you will need
 - to recall various proof methods and select appropriate ones to apply to a given problem
-- to recall and apply the definition of various set operations and relations: product, subset, union, intersection, and power set
+- to recall and apply the definition of various set operations and relations: product, subset, union, intersection, power set, cardinality, finite sets
 - to recall and apply the definitions of various properties of functions: domain, co-domain, injectivity, surjectivity, inverse
 - to make logical arguments as required for a proof
 - comfort with GitHub and LaTeX
