@@ -28,51 +28,105 @@
   Prove: $\mathcal{P}(A) \subseteq \mathcal{P}(B)$ if and only if $A \subseteq B$.
 
   \begin{solution}
-    % Enter your solution here.
+  
+  If $\mathcal{P}(A) \subseteq \mathcal{P}(B)$ then $A \subseteq B$ and  If $A \subseteq B$ then $\mathcal{P}(A) \subseteq \mathcal{P}(B)$.\\
+To prove the first part:\\
+Assume $\mathcal{P}(A) \subseteq \mathcal{P}(B)$.\\
+Taking any subset $C$ of $A$.\\
+Since $C \subseteq \mathcal{P}(A)$, this implies $C \subseteq \mathcal{P}(B)$.\\
+For any element $c$ in $C$, $c$ is a subset of $A$. Since $A \subseteq B$, this means $c \subseteq B$. Hence, $C \subseteq B$.\\
+Since $C$ was chosen arbitrarily, this shows $A \subseteq B$.\\
+To prove the second part:\\
+Assume $A \subseteq B$.\\
+Assuming a subset $C$ of $A$.\\
+For any element $c$ in $C$, $c \in A$ and since $A \subseteq B$, $c \in B$.
+This implies that $C \subseteq B$.\\
+Therefore, $\mathcal{P}(A) \subseteq \mathcal{P}(B)$.\\
+Hence proved
   \end{solution}
 
 
 \question Show that if \(A \subseteq C\) and \(B \subseteq D\), then \(A \times B \subseteq C \times D\).
 
   \begin{solution}
-    % Enter your solution here.
+    
+     \(A \subseteq C\) = every element in $A$ is also in $C$.\\
+     \(B \subseteq D\) = if an element is in $B$ then it must also be in $D$.\\
+     Suppose $(a,b)$ $\in$ \(A \times B \)\\
+     Then $a \in A$ and $b \in B$\\
+     If $a \in A$ then $a \in C$\\
+      If $b \in B$ then $b \in D$\\
+      This shows that $(a,b)$ $\in$ \(C \times D \)\\
+      Then,  \(A \times B \subseteq C \times D\).
   \end{solution}
   
 \question Prove or disprove the following statements for all sets $A, B,$ and $C$:
   \begin{parts}
   \part $ A \times (B \cup C) = (A \times B) \cup (A \times C) $
     \begin{solution}
-      % Enter your solution here.
+    
+      $ A \times (B \cup C)$ = ${(a,b) | a \in A \land b \in(B \cup C) }$\\
+      ${(a,b) | a \in A \land ( b \in B )\lor (b \in C) }$\\
+      Using distributive law.\\
+       ${ (a \in A \land ( b \in B )) \lor (a \in A\land (b \in C)) }$\\
+      $(A \times B) \lor (A \times C)$\\
+      $(A \times B) \cup (A \times C)$\\
+      Hence proved
     \end{solution}
 
   \part $A \times (B \cap C) = (A \times B) \cap (A \times C) $
     \begin{solution}
-      % Enter your solution here.
+    
+      $ A \times (B \cap C)$ = ${(a,b) | a \in A \land b \in(B \cap C) }$\\
+      ${(a,b) | a \in A \land ( b \in B )\land (b \in C) }$\\
+      Using distributive law.\\
+       ${ (a \in A \land ( b \in B )) \land (a \in A\land (b \in C)) }$\\
+      $(A \times B) \land (A \times C)$\\
+      $(A \times B) \cap (A \times C)$\\
+      Hence proved
     \end{solution}
   \end{parts}
   
 \question If $A, B,$ and $C$ are sets such that $A \subseteq B$ and $B \subseteq C$, show that $A \subseteq C$.
 
   \begin{solution}
-    % Enter your solution here.
+    
+    $\forall x(x \in A \implies x\in B)$ $\land$  $\forall x(x \in B \implies x\in C)$\\
+    This shows that if $x$ belongs to $A$ then $x$ must also belongs to $B$ and if $x$ belongs to $B$ then $x$ must also belong to $C$.\\
+    Therefore, if $x$ $\in$ $A$ then $x$ $\in$ $C$.\\
+    $A \subseteq C$\\
+    Hence proved
   \end{solution}
 
 \question Show that if $A$ and $B$ are finite sets, then  \( A \cup B \) is a finite set.
 
   \begin{solution}
-    % Enter your solution here.
+
+    suppose $A=\{a_1,a_2,...,a_n\}$ and $B= \{b_1,b_2,...,b_n\}$ are two finite sets.\\
+    Then their union would be:\\
+     \( A \cup B \) = $\{a_1,b_1,a_2,b_2,...a_n,b_n\}$\\
+     Which is also finite
   \end{solution}
   
 \question
   \begin{parts}
   \part Prove that the function $f: \Z\to\Z$, defined as \(f(n) = n^2\) is neither injective nor surjective.
     \begin{solution}
-      % Enter your solution here.
+      
+      The function is not injective:\\
+      Proof using counterexample\\
+      \(f(n) = n^2\)\\
+      $f(2)=f(-2)$ but 2 $\not =$ -2.\\
+       The function is not surjective:\\
+      no such number exist whose square is a negative number, this does not cover the domain of all integers hence it is not surjective.
+      
     \end{solution}
 
   \part Can you make this function injective without doing any changes to the original function? (Hint: try redefining its domain and/or co-domain.)
     \begin{solution}
-      % Enter your solution here.
+    
+      Changing the domain and codomain from $f: \Z\to\Z$ to $f: \Z^+\to\Z^+$ would make this function injective.
+      
     \end{solution}
   \end{parts}
 
@@ -80,29 +134,46 @@
 \question Prove that the function $f: \Z\to\Z$ defined as \(f(n) = n+1\), is invertible.
 
   \begin{solution}
-    % Enter your solution here.
+    
+    A function is invertible if it has an inverse. To prove that the inverse exist, we need to show that the function is both injective and surjective.\\
+    To show that the function is one-to-one:\\
+    \(f(n) = n+1\) taking a and b where a $\not =$ b\\
+    then \(f(a) = a+1\) $\not =$ \(f(b) = b+1\)
+    To show that the function is onto:\\
+    \(f(n) = n+1\) we need to demonstrate that for every integer $y$ in the codomain, there exists an integer $x$ in the domain such that $f(x)=y$.\\
+    to find an integer $x$ in the codomain such that $f(x)=y$.\\
+    $x$ +1 = $y$\\
+    $x$ = $y$ -1\\
+    This shows that every element in codomain has at least one match in the domain, so the function is onto.\\
+    We have proved that the function has one to one correspondence so it is invertible.
+     
   \end{solution}
   
 \question Give an explicit formula for a function from \Z to $\Z^+$ that is:
   \begin{parts}
   \part one-to-one, but not onto,
     \begin{solution}
-      % Enter your solution here.
+     
+     $f(n)=n^2+1$ 
     \end{solution}
 
   \part onto, but not one-to-one,
     \begin{solution}
-      % Enter your solution here.
+      
+     $f(n)=n^2$ 
     \end{solution}
 
   \part one-to-one and onto, and
     \begin{solution}
-      % Enter your solution here.
+      
+      $f(n)=n+1$ 
+      
     \end{solution}
 
   \part neither one-to-one nor onto.
     \begin{solution}
-      % Enter your solution here.
+      
+      $-n^2$
     \end{solution}
   \end{parts}
 
@@ -111,7 +182,12 @@
   Given this definition, prove that a strictly increasing function is always injective over the interval, I.
 
   \begin{solution}
-    % Enter your solution here.
+    
+  By definition, if $a < b$ then $f(a) < f(b)$\\
+  and if $a > b$ then $f(a) > f(b)$, \\
+  Thus if $a \not = b$ then  $f(a) \not = f(b)$ hence the functions will always be injective.
+    
+    
   \end{solution}
 \end{questions}
 \end{document}
